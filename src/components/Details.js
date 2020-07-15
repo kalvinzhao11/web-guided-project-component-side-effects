@@ -44,6 +44,7 @@ export default function Details(props) {
   // console.log(`Details is being rendered, after render React will do DOM surgery`)
 
   useEffect(() => {
+    // friendId is a prop that is coming into this component
     axios.get(`${BASE_URL}/friends/${props.friendId}?api_key=${API_KEY}`)
       .then(res => {
         setDetails(res.data)
