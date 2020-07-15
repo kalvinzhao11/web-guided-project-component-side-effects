@@ -28,6 +28,8 @@ export default function Details(props) {
 
   // TASK 6 - Create a side effect 🥵 that runs after every render.
   useEffect(() => {
+    // no changing state (unless it's wrapped in a conditional)
+    // INFINITE LOOP
     console.log(`🥵 Details for user with id ${friendId} was DOM operated on`)
     return () => {
       console.log(`🥵 Cleaning up after user with id ${friendId}`)
