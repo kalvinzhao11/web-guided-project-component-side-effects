@@ -43,6 +43,10 @@ export default function Details(props) {
 
   // console.log(`Details is being rendered, after render React will do DOM surgery`)
 
+  useEffect(() => {
+    axios.get() // detailed view
+  }, [friendId]) // this makes the effect run if the DOM surgery was caused by change in friendId
+
   return (
     <div className='container'>
       <h2>Details:</h2>
