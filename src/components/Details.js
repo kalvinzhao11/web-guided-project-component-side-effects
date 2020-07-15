@@ -27,6 +27,12 @@ export default function Details(props) {
   }, [])
 
   // TASK 6 - Create a side effect 🥵 that runs after every render.
+  useEffect(() => {
+    console.log(`🥵 Details for user with id ${friendId} was DOM operated on`)
+    return () => {
+      console.log(`🥵 Cleaning up after user with id ${friendId}`)
+    }
+  })
 
   // TASK 7 - Create a side effect 📲 that runs when a particular variable changes:
   // Whenever props.friendId updates we should trigger a fetch for details of the friend.
