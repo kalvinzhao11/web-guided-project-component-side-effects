@@ -15,16 +15,16 @@ export default function Details(props) {
   // TASK 5 - Create a side effect 👻 that runs only after first render
   // and puts a 'click' event handler on document.
   // See what happens if we don't clean up.
-  useEffect(() => {
-    console.log(`👻 Details mounted to the DOM (1st) DIRTY`)
-    const listener = event => console.log(`Random number: ${Math.random()}`)
-    document.addEventListener('click', listener)
+  // useEffect(() => {
+  //   console.log(`👻 Details mounted to the DOM (1st) DIRTY`)
+  //   const listener = event => console.log(`Random number: ${Math.random()}`)
+  //   document.addEventListener('click', listener)
 
-    return () => {
-      console.log(`👻 Details is about to unmount SO WE HAD BETTER CLEAN UP`)
-      document.removeEventListener('click', listener)
-    }
-  }, [])
+  //   return () => {
+  //     console.log(`👻 Details is about to unmount SO WE HAD BETTER CLEAN UP`)
+  //     document.removeEventListener('click', listener)
+  //   }
+  // }, [])
 
   // TASK 6 - Create a side effect 🥵 that runs after every render.
   useEffect(() => {
